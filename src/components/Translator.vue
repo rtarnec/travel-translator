@@ -518,25 +518,24 @@ export default {
           contentType: file.type
         };
 
-        const uuid = this.generateUUID();
-        const uploadFileName = uuid + "." + fileName.split(".").pop();
+        const docRef = db.collection("ocrTranslations").doc();
+
+        const uploadFileName = docRef.id + "." + fileName.split(".").pop();
 
         const fileRef = storage.ref("img_to_ocr/" + uploadFileName);
 
         fileRef
           .put(file, metadata)
           .then(() => {
-            this.firestoreDocListener = db
-              .doc("ocrTranslations/" + uuid)
-              .onSnapshot(doc => {
-                if (doc.exists && doc.data().hasOwnProperty("translated")) {
-                  this.translatedText = doc.data().translated.en;
-                  this.originalLanguage = this.getLanguage(
-                    doc.data().originalLanguage
-                  );
-                  this.showTranslationResult();
-                }
-              });
+            this.firestoreDocListener = docRef.onSnapshot(doc => {
+              if (doc.exists && doc.data().hasOwnProperty("translated")) {
+                this.translatedText = doc.data().translated.en;
+                this.originalLanguage = this.getLanguage(
+                  doc.data().originalLanguage
+                );
+                this.showTranslationResult();
+              }
+            });
           })
           .catch(error => {
             this.showDialog("Error", error.message);
