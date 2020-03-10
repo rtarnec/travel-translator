@@ -2,7 +2,9 @@
 
 ## Description
 
-This is the code of a Vue.js application that works with Firebase as a backend.
+This is the code of a Vue.js application that works with Firebase as a backend. The backend has to be deployed for the application to work.
+
+**The code of the Firebase backend, together with the instructions for deploying the Firebase project, are to be found in the following repository: https://github.com/rtarnec/travel-translator-backend.**
 
 The app is called "Travel Translator" because it allows translating pictures of text to English. So it may be useful during travels, in order to translate road signs, restaurant menus, museum flyers, etc....
 
@@ -14,6 +16,10 @@ In the front-end, a Firestore listener is declared which updates the UI as soon 
 
 ## How to use it
 
+- Create a project in your file system for this Vue.js app
+
+- Clone this repository
+
 - Adapt the `firebaseConfig.js` file with the Firebase config object of your own Firebase project. See https://firebase.google.com/docs/web/setup#config-object.
 
 - Compile the Vue.js app for production
@@ -24,8 +30,4 @@ npm run build
 
 - Copy/paste the resulting files (to be found in the `dist` folder) to the `public` folder of the Firebase project.
 
-- Deploy your Firebase project
-
-## Corresponding Firebase project
-
-The corresponding Firebase project is to be found at https://github.com/rtarnec/travel-translator-backend
+- Deploy your Firebase project (See the [backend repository](https://github.com/rtarnec/travel-translator-backend) for more details)
