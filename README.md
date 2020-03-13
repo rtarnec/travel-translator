@@ -2,9 +2,11 @@
 
 ## Description
 
-This is the code of a Vue.js application that works with Firebase as a backend. The backend has to be deployed for the application to work.
+**This is the code of a Vue.js application Vue.js which is presented into detail in the following "Firebase Developers" Medium article: [How to Create an Image Translation Web App in 25 Lines of Code](https://medium.com/firebase-developers/how-to-create-an-image-translation-web-app-in-25-lines-of-code-e67460208d29).**
 
-**The code of the Firebase backend, together with the instructions for deploying the Firebase project, are to be found in the following repository: https://github.com/rtarnec/travel-translator-backend.**
+As detailed in the article, this Vue.js application works with Firebase as a backend. The backend has to be deployed for the application to work.
+
+The code of the Firebase backend, together with the instructions for deploying the Firebase project, are to be found in the following repository: https://github.com/rtarnec/travel-translator-backend.
 
 The app is called "Travel Translator" because it allows translating pictures of text to English. So it may be useful during travels, in order to translate road signs, restaurant menus, museum flyers, etc....
 
